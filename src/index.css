@@ -1,0 +1,73 @@
+@import "tailwindcss";
+
+@theme {
+  --color-ink: #111111;
+  --color-denim: #1a2744;
+  --color-denim-mid: #2D476B;
+  --color-indigo: #283d5e;
+  --color-ecru: #f0ece4;
+  --color-worn-gold: #b8963e;
+  --color-rust: #9e4a2f;
+  --color-chalk: #d4d0c7;
+  --color-paper: #e8e4db;
+  --color-stitch: #c4a24e;
+
+  --font-heading: "Bebas Neue", sans-serif;
+  --font-body: "Inter", sans-serif;
+  --font-editorial: "Cormorant Garamond", serif;
+  --font-hand: "Caveat", cursive;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  body {
+    @apply bg-ink text-ecru font-body;
+    overflow-x: hidden;
+  }
+
+  ::selection {
+    background: var(--color-worn-gold);
+    color: var(--color-ink);
+  }
+}
+
+@layer utilities {
+  /* Noise grain overlay — use on sections for texture */
+  .grain::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.06'/%3E%3C/svg%3E");
+    pointer-events: none;
+    z-index: 1;
+    mix-blend-mode: overlay;
+  }
+
+  /* Denim weave texture */
+  .denim-bg {
+    background-color: var(--color-denim);
+    background-image:
+      repeating-linear-gradient(
+        90deg,
+        transparent,
+        transparent 1px,
+        rgba(255,255,255,0.02) 1px,
+        rgba(255,255,255,0.02) 2px
+      ),
+      repeating-linear-gradient(
+        0deg,
+        transparent,
+        transparent 1px,
+        rgba(255,255,255,0.015) 1px,
+        rgba(255,255,255,0.015) 3px
+      );
+  }
+
+  .stitch-border {
+    border: 2px dashed var(--color-stitch);
+  }
+}
