@@ -7,8 +7,8 @@ export default function Header() {
     <header
       className="fixed top-0 w-full z-50 flex justify-between items-center px-5 md:px-10 py-4 bg-ink/80 backdrop-blur-md border-b border-ecru/5"
     >
-      <Link to="/" className="font-heading text-2xl tracking-[0.15em] text-ecru hover:text-worn-gold transition-colors">
-        ANGIE.THREADZ
+      <Link to="/" className="flex items-center hover:opacity-80 transition-opacity">
+        <img src="/ANGIETHREADZLOGO.png" alt="Angie.Threadz Logo" className="h-12 w-auto" />
       </Link>
 
       <nav className="hidden md:flex items-center gap-8">
