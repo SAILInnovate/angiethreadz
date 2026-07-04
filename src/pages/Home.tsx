@@ -17,32 +17,36 @@ export default function Home() {
         {/* Bottom fade */}
         <div className="absolute bottom-0 left-0 w-full h-1/3 bg-gradient-to-t from-ink to-transparent" />
 
-        {/* Minimal text — bottom left */}
-        <div className="absolute bottom-8 left-5 md:left-10 z-10 max-w-lg">
-          <p
-            className="font-hand text-worn-gold text-2xl md:text-3xl mb-2 rotate-[-2deg] animate-[fadeSlideUp_1s_0.3s_both]"
-          >
-            handmade in manchester
-          </p>
-          <h1
-            className="font-heading text-ecru text-[clamp(3rem,10vw,7rem)] leading-[0.9] tracking-tight animate-[fadeSlideUp_0.8s_0.1s_both]"
-          >
-            DENIM<br />CROCHET<br />BAG
-          </h1>
-          <p className="text-ecru/50 text-sm tracking-widest uppercase mt-4 animate-[fadeSlideUp_1s_0.6s_both]">
-            Reclaimed denim · 14 hrs per piece · 1 of 1
-          </p>
-        </div>
+        {/* Content Container (prevents overlap) */}
+        <div className="absolute bottom-8 left-5 right-5 md:left-10 md:right-10 z-10 flex flex-col md:flex-row justify-end md:justify-between items-start md:items-end gap-6 md:gap-10 pointer-events-none">
+          
+          {/* Minimal text — bottom left */}
+          <div className="max-w-lg pointer-events-auto">
+            <p
+              className="font-hand text-worn-gold text-2xl md:text-3xl mb-2 rotate-[-2deg] animate-[fadeSlideUp_1s_0.3s_both]"
+            >
+              handmade in manchester
+            </p>
+            <h1
+              className="font-heading text-ecru text-[clamp(3rem,10vw,7rem)] leading-[0.9] tracking-tight animate-[fadeSlideUp_0.8s_0.1s_both]"
+            >
+              DENIM<br />CROCHET<br />BAG
+            </h1>
+            <p className="text-ecru/50 text-sm tracking-widest uppercase mt-4 animate-[fadeSlideUp_1s_0.6s_both]">
+              Reclaimed denim · 14 hrs per piece · 1 of 1
+            </p>
+          </div>
 
-        {/* Price — bottom right */}
-        <div className="absolute bottom-8 right-5 md:right-10 z-10 text-right animate-[fadeSlideUp_1s_0.5s_both]">
-          <p className="font-heading text-worn-gold text-5xl md:text-6xl">£200</p>
-          <Link
-            to="/product/1"
-            className="inline-block mt-3 text-ecru/60 text-xs tracking-[0.2em] uppercase border-b border-ecru/20 pb-1 hover:text-ecru hover:border-ecru/60 transition-all duration-300"
-          >
-            View piece →
-          </Link>
+          {/* Price — bottom right */}
+          <div className="text-left md:text-right pointer-events-auto animate-[fadeSlideUp_1s_0.5s_both]">
+            <p className="font-heading text-worn-gold text-5xl md:text-6xl">£200</p>
+            <Link
+              to="/product/1"
+              className="inline-block mt-1 md:mt-3 text-ecru/60 text-xs tracking-[0.2em] uppercase border-b border-ecru/20 pb-1 hover:text-ecru hover:border-ecru/60 transition-all duration-300"
+            >
+              View piece →
+            </Link>
+          </div>
         </div>
       </section>
 

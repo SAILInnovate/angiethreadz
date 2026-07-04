@@ -31,16 +31,31 @@ export default function Product() {
 
           {/* Mobile: swipe dots */}
           <div className="md:hidden h-[75vh] relative">
-            <img
-              src={images[activeImage].src}
-              alt={images[activeImage].alt}
-              className="w-full h-full object-contain p-6"
-            />
-            <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2">
+            <div 
+              className="flex overflow-x-auto snap-x snap-mandatory h-full w-full hide-scrollbar"
+              onScroll={(e) => {
+                const scrollLeft = e.currentTarget.scrollLeft;
+                const width = e.currentTarget.clientWidth;
+                const index = Math.round(scrollLeft / width);
+                if (index !== activeImage) {
+                  setActiveImage(index);
+                }
+              }}
+            >
+              {images.map((img, i) => (
+                <div key={i} className="flex-none w-full h-full snap-center relative">
+                  <img
+                    src={img.src}
+                    alt={img.alt}
+                    className="w-full h-full object-contain p-6"
+                  />
+                </div>
+              ))}
+            </div>
+            <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2 z-10 pointer-events-none">
               {images.map((_, i) => (
-                <button
+                <div
                   key={i}
-                  onClick={() => setActiveImage(i)}
                   className={`w-1.5 h-1.5 rounded-full transition-all ${
                     i === activeImage ? 'bg-ecru w-4' : 'bg-ecru/30'
                   }`}
