@@ -19,6 +19,11 @@
 }
 
 @layer base {
+  html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
   html {
     scroll-behavior: smooth;
     -webkit-font-smoothing: antialiased;
@@ -26,7 +31,7 @@
 
   body {
     @apply bg-ink text-ecru font-body;
-    overflow-x: hidden;
+    position: relative;
   }
 
   ::selection {

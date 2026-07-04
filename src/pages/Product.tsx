@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
 
 export default function Product() {
   const [activeImage, setActiveImage] = useState(0);
@@ -101,9 +102,13 @@ export default function Product() {
             </div>
           </div>
 
-          <button className="w-full bg-ecru text-ink font-heading text-xl tracking-[0.15em] py-4 hover:bg-worn-gold transition-colors">
+          <motion.button 
+            whileHover={{ scale: 1.02 }}
+            whileTap={{ scale: 0.98 }}
+            className="w-full bg-ecru text-ink font-heading text-xl tracking-[0.15em] py-4 hover:bg-worn-gold transition-colors"
+          >
             ADD TO BAG
-          </button>
+          </motion.button>
 
           <Link
             to="/shop"

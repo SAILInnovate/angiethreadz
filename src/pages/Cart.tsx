@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import { useState } from 'react';
+import { motion } from 'framer-motion';
 
 export default function Cart() {
   const [loading, setLoading] = useState(false);
@@ -27,7 +28,12 @@ export default function Cart() {
         <h1 className="font-heading text-ecru text-4xl md:text-5xl tracking-tight mb-10">YOUR BAG</h1>
 
         {/* Item */}
-        <div className="flex gap-5 border-b border-ecru/10 pb-8">
+        <motion.div 
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.1, duration: 0.5 }}
+          className="flex gap-5 border-b border-ecru/10 pb-8"
+        >
           <div className="w-28 h-28 bg-ink shrink-0 overflow-hidden">
             <img src="/sellingbag.png" alt="Denim Crochet Bag" className="w-full h-full object-contain p-2" />
           </div>
@@ -43,10 +49,15 @@ export default function Cart() {
               <span className="font-heading text-worn-gold text-2xl">£200</span>
             </div>
           </div>
-        </div>
+        </motion.div>
 
         {/* Summary */}
-        <div className="mt-10 space-y-4 text-sm text-ecru/50">
+        <motion.div 
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.2, duration: 0.5 }}
+          className="mt-10 space-y-4 text-sm text-ecru/50"
+        >
           <div className="flex justify-between">
             <span>Subtotal</span>
             <span className="text-ecru/80">£200.00</span>
@@ -59,15 +70,17 @@ export default function Cart() {
             <span>Total</span>
             <span className="font-heading text-worn-gold text-2xl">£200.00</span>
           </div>
-        </div>
+        </motion.div>
 
-        <button 
+        <motion.button 
+          whileHover={{ scale: 1.02 }}
+          whileTap={{ scale: 0.98 }}
           onClick={handleCheckout}
           disabled={loading}
           className="w-full mt-8 bg-ecru text-ink font-heading text-xl tracking-[0.15em] py-4 hover:bg-worn-gold transition-colors flex justify-center items-center disabled:opacity-50"
         >
           {loading ? 'PROCESSING...' : 'CHECKOUT'}
-        </button>
+        </motion.button>
 
         <Link
           to="/shop"
