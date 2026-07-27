@@ -14,7 +14,7 @@ export default function Header() {
       <nav className="hidden md:flex items-center gap-8">
         {[
           { to: '/shop', label: 'Shop' },
-          { to: '/lookbook', label: 'Lookbook' },
+          { to: '/lookbook', label: 'Visual Diary' },
         ].map(({ to, label }) => (
           <Link
             key={to}

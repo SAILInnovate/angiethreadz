@@ -79,7 +79,7 @@ export default function Product() {
 
           <div className="space-y-4 text-ecru/60 text-sm leading-relaxed mb-10 max-w-sm">
             <p>
-              Hand crocheted from strips of reclaimed denim jeans. Each bag takes roughly 14 hours and uses 3–4 pairs of jeans.
+              Hand crocheted from strips of reclaimed denim jeans. Each bag takes roughly 15 hours and uses 7–8 pairs of jeans.
             </p>
             <p>
               The varying indigo tones come from the original garments — no two bags will ever look the same.

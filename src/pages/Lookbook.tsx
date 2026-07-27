@@ -35,13 +35,13 @@ export default function Lookbook() {
           className="relative z-10 p-5 md:p-10 pb-12 md:pb-16 max-w-2xl"
         >
           <p className="font-hand text-worn-gold text-2xl md:text-3xl rotate-[-2deg] mb-2">
-            visual diary — vol. 01
+            vol 1
           </p>
           <h1 className="font-heading text-ecru text-[clamp(3rem,8vw,6rem)] leading-[0.9] tracking-tight">
-            TRACING<br />THE CITY
+            VISUAL<br />DIARY
           </h1>
           <p className="text-ecru/40 text-sm tracking-widest uppercase mt-4 max-w-sm">
-            Fashion as a result of spatial behaviour. Manchester's Northern Quarter, documented.
+            Enter our world. Visual inspiration for your fashion curation.
           </p>
         </motion.div>
       </section>

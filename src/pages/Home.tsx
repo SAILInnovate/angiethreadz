@@ -25,7 +25,7 @@ export default function Home() {
             <p
               className="font-hand text-worn-gold text-2xl md:text-3xl mb-2 rotate-[-2deg] animate-[fadeSlideUp_1s_0.3s_both]"
             >
-              handmade in manchester
+              handmade
             </p>
             <h1
               className="font-heading text-ecru text-[clamp(3rem,10vw,7rem)] leading-[0.9] tracking-tight animate-[fadeSlideUp_0.8s_0.1s_both]"
@@ -33,7 +33,7 @@ export default function Home() {
               DENIM<br />CROCHET<br />BAG
             </h1>
             <p className="text-ecru/50 text-sm tracking-widest uppercase mt-4 animate-[fadeSlideUp_1s_0.6s_both]">
-              Reclaimed denim · 14 hrs per piece · 1 of 1
+              Reclaimed denim · 15 hrs per piece · 1 of 1
             </p>
           </div>
 
@@ -80,17 +80,17 @@ export default function Home() {
             <div className="space-y-5 text-ecru/70 text-base md:text-lg leading-relaxed font-body">
               <Reveal delay={0.15}>
                 <p>
-                  I buy old jeans from charity shops around Manchester. Levis, Wranglers, whatever has the best wear on it. Then I cut them into strips and pull them apart until I have yarn.
+                  Every bag starts with a pair of pre-loved jeans. Sourced from charity shops and second hand places, selecting pairs based on their wear. Each pair is cut into continuous strips and turned into denim yarn by hand. Crocheting one bag takes around <span className="text-worn-gold font-bold">15 hours</span>.
                 </p>
               </Reveal>
               <Reveal delay={0.25}>
                 <p>
-                  It takes me about <span className="text-worn-gold font-bold">14 hours</span> to crochet one bag. The colour changes happen naturally — darker strips from the waistband, lighter ones from the thigh. I don't plan it. The denim decides.
+                  Different sections of the jeans are worked into the bag and the denim naturally shifts from dark to light depending on where the fabric came from because every pair of jeans wears differently. No two bags are ever the same.
                 </p>
               </Reveal>
               <Reveal delay={0.35}>
                 <p className="text-ecru/40 text-sm tracking-wider uppercase border-t border-ecru/10 pt-5 mt-8">
-                  Every bag uses approximately 3–4 pairs of jeans. When one sells, that specific combination of fabric is gone forever.
+                  Every bag uses approximately 7–8 pairs of jeans. When one sells, that specific combination of fabric is gone forever.
                 </p>
               </Reveal>
             </div>
@@ -113,11 +113,11 @@ export default function Home() {
         <div className="relative z-10 h-full flex flex-col justify-center px-5 md:px-10 max-w-xl">
           <Reveal>
             <h2 className="font-heading text-ecru text-5xl md:text-7xl leading-[0.9] mb-4">
-              LOOKBOOK
+              VISUAL<br />DIARY
             </h2>
           </Reveal>
           <Reveal delay={0.1}>
-            <p className="text-ecru/50 text-sm mb-6">The visual diary. Street style, texture studies, and the city that made this brand.</p>
+            <p className="text-ecru/50 text-sm mb-6">Enter our world. Visual inspiration for your fashion curation.</p>
           </Reveal>
           <Reveal delay={0.2}>
             <Link

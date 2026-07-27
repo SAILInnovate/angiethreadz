@@ -6,7 +6,7 @@ export default function MobileBottomNav() {
     { label: 'Home', path: '/' },
     { label: 'Shop', path: '/shop' },
     { label: 'Bag', path: '/cart' },
-    { label: 'Look', path: '/lookbook' },
+    { label: 'Diary', path: '/lookbook' },
   ];
 
   return (
